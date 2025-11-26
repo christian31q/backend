@@ -1,11 +1,7 @@
 services:
   - type: web
-    name: form-api
+    name: api
     runtime: docker
     plan: free
     region: oregon
-    envVars:
-      - key: PHP_VERSION
-        value: "8.2"
     healthCheckPath: /test.php
-    autoDeploy: true
