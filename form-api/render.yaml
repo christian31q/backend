@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: form-api
+    runtime: docker
+    plan: free
+    region: oregon
+    buildCommand: echo "No build required for PHP"
+    startCommand: php -S 0.0.0.0:$PORT -t api
+    envVars:
+      - key: PHP_VERSION
+        value: "8.2"
+    healthCheckPath: /test.php
+    autoDeploy: true
