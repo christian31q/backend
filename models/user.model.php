@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../database/connection.php';
+//require_once __DIR__ . '/../database/connection.php';
 
 global $conn;
 
 function getUsersModel() {
-  global $conn;
+  /*global $conn;
   
   $query = "SELECT * FROM users";
   $result = $conn->query($query);
@@ -18,7 +18,12 @@ function getUsersModel() {
     $users[] = $row;
   }
   
-  return $users;
+  return $users;*/
+  // sample data
+  return [
+    ['id' => 1, 'nombre' => 'Juan Pérez', 'email' => 'juan.perez@example.com'],
+    ['id' => 2, 'nombre' => 'María Gómez', 'email' => 'maria.gomez@example.com']
+  ];
 }
 
 function getUserByIdModel($id) {
