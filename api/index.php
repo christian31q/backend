@@ -30,7 +30,7 @@ $path = str_replace('/api', '', $path);
 
 // Route requests
 if (strpos($path, '/users') === 0) {
-  require_once 'routes/user.routes.php';
+  require_once '../routes/user.routes.php';
   handleUserRoutes($method, $path);
 } elseif ($path === '/') {
   http_response_code(200);
